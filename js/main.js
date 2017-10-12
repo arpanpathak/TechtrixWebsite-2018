@@ -6,6 +6,9 @@ function showClock(){
 	$('.clock').fadeIn('slow');
 }
 $(function(){
+	particlesJS.load('particles-js', 'config.json', function() {
+	  console.log('callback - particles.js config loaded');
+	});
 	$('svg').on('load',(function () {
 	      setTimeout(function () {
 	          if (!animationComplete) {
