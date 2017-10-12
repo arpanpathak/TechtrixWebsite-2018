@@ -1,0 +1,76 @@
+body,html{
+	margin: 0 0;
+	background: #1C2833;
+
+}
+*:hover{
+	outline: none;
+}
+.container{
+	display: grid;
+	text-align: center;
+	grid-template-columns: 1fr;
+	grid-gap: 5px;
+	margin: 0 auto;
+}
+.clock{
+	display: inline-block;
+	visibility: hidden;
+	width: auto;
+	position: absolute;
+	 bottom: 3%;
+	 left: 50%;
+	 transform: translate(-50%, 0%);
+	 zoom: 0.9;
+	    -moz-transform: scale(0.9)
+	   
+}
+#logoAnime{
+	display: inline-block;
+	width: auto;
+	position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-30%, -70%);
+	 zoom: 0.9;
+	    -moz-transform: scale(0.9)
+}
+.techtrix-text{  
+	visibility: hidden;
+	text-shadow: 1px 1px 1px lightgray;
+	position: absolute;
+	color: #fff;
+	font-size: 111px;
+	bottom: 10%;
+	left: 50%;
+	text-align: center;
+	transform: translateX(-65%);
+}
+.no{
+	font-family: arial;
+}
+.small-text{
+	margin-top: -10px;
+	visibility: hidden;
+	font-family: arial;
+	color: #fff;
+	font-family: latina;
+	font-size: 20px;
+	transform: translateX(-10px);
+}
+.highlight{
+	background: #fff;
+	color: black;
+}
+@font-face {
+    font-family: latina;
+    src: url(neo_latina.ttf);
+}
+
+@media (max-width: 1200px)
+{
+	.clock{
+		zoom: 0.5;
+		   -moz-transform: scale(0.5)
+	}
+}
