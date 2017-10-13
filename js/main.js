@@ -2,14 +2,16 @@ var animationComplete = false;
 function animationCalled() {
 	animationComplete = true;
 }
-function showClock(){
-	$('.clock').fadeIn('slow');
-}
+// function showClock(){
+// 	$('.clock').toggle('slow');
+// 	// $('.date').toggle('slow');
+// }
 $(function(){
+
 	particlesJS.load('particles-js', 'config.json', function() {
 	  console.log('callback - particles.js config loaded');
 	});
-	$('svg').on('load',(function () {
+	$('#svg2').on('load',(function () {
 	      setTimeout(function () {
 	          if (!animationComplete) {
 	              animateT();
@@ -18,7 +20,7 @@ $(function(){
 	   );
 	   }) );
 
-	var date = new Date("March 5, 2018 02:15:00"); //Month Days, Year HH:MM:SS
+	var date = new Date("February 18, 2018 02:15:00"); //Month Days, Year HH:MM:SS
 	var now = new Date();
 	var diff = (date.getTime()/1000) - (now.getTime()/1000);
 
@@ -27,5 +29,6 @@ $(function(){
 	    countdown: true
 	});
 			   
-	clock.start();   
+	clock.start();  
+
 });

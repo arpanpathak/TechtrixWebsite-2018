@@ -3,8 +3,18 @@ body,html{
 	background: #1C2833;
 	overflow-x: hidden;
 }
+
 *:hover{
 	outline: none;
+}
+@keyframes type{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 .container{
 	
@@ -24,9 +34,26 @@ body,html{
 	 -moz-transform: scale(0.9) translate(-30%, 0%);
 	 
 }
+.date{
+	
+	text-transform: uppercase;
+	font-family: verdana;
+	color: #fff;
+	text-shadow: 1px 0px 2px black;
+	font-size: 80px;
+	display: inline-block;
+	z-index: 2;
+	position: absolute;
+	bottom: 1px;
+	left: 50%;
+	transform: translate(-45%, 0%);
+	zoom: 0.9;
+	-moz-transform: scale(0.9) translate(-50%, 0%);
+	 
+}
 #logoAnime{
 	display: inline-block;
-	width: auto;
+	
 	position: absolute;
 	 top: 50%;
 	 left: 50%;
@@ -46,11 +73,14 @@ body,html{
 	text-align: center;
 	transform: translateX(-65%);
 	-moz-transform: transform: translateX(-65%);
+	animation: typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
 }
 .no{
 	font-family: arial;
 }
 .small-text{
+	position: absolute;
 	margin-top: -10px;
 	visibility: hidden;
 	font-family: arial;
@@ -63,6 +93,9 @@ body,html{
 	background: #fff;
 	color: black;
 }
+.logo-container{
+	position: relative;
+}
 @font-face {
     font-family: latina;
     src: url(neo_latina.ttf);
@@ -72,6 +105,24 @@ body,html{
 {
 	.clock{
 		zoom: 0.5;
-		-moz-transform: scale(0.5)
+		-moz-transform: scale(0.5);
+	}
+
+}
+
+@media (max-width: 700px)
+{
+
+	.techtrix-text{
+		font-size: 50px;
+	}
+	/*.clock{
+		visibility: hidden;
+	}*/
+	.logo-container{
+		transform: scale(0.5);
+		position: relative;
+		margin: 0 auto;
+		text-align: center;
 	}
 }

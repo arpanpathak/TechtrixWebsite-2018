@@ -18,11 +18,12 @@
 		<div class="clock-wrapper">
 			
 			<div class="clock"></div>
+			<!-- <div class="date">February 2018</div> -->
 		</div>
 		
-		<div id="logoAnime">
-
-		                        <svg id="svg2" x="0px" y="0px" width="500px" height="500px">
+		<div id="logoAnime" >
+							<div class="logo-container">
+		                        <svg id="svg2" x="0px" y="0px" width="500px" height="500px" >
 		                            <g id="layer1">
 		                                <g id="layer1-8" transform="translate(-0.590663 0.714298)">
 		                                    <g id="layer1-5" transform="translate(-0.30714 -0.0433)">
@@ -564,10 +565,15 @@
 
 		                        </svg>
 		        <canvas id="canvas" style="position:absolute; left:87px; top:90px; z-index: 4;"></canvas>
-		        <div style="font-family: latina; color: #fff;" class="techtrix-text"><span style="color: #ed4410;">TECH</span>TRIX</h1>
+		        </div> <!-- end of logo container -->
+		        <div style="position: relative;">
+		        	<div style="font-family: latina; color: #fff;" class="techtrix-text"><span style="color: #ed4410;">TECH</span>TRIX</div>
+		        	<div class="small-text"><span class="no"> 2018 </span>| RISING FROM <span class="highlight">THE ASHES </span></div>
+		        </div>
+		        
 
 		    </div>
-		    <div class="small-text"><span class="no"> 2018 </span>| RISING FROM <span class="highlight">THE ASHES </span></div>
+		   
 		</div>
 		<script
 		  src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -577,6 +583,9 @@
 		
 		<script type="text/javascript" src="js/logo.js"></script>
 		<script src="plugins/particle/particles.js"></script>
+		<!-- <script src="plugins/terminal/jquery.teletype.js"></script> -->
+
 		<script type="text/javascript" src="js/main.js"></script>
+
 	</body>
 </html>

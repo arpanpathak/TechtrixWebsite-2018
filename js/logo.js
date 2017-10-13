@@ -138,10 +138,12 @@ function animateT() {
             drawLine(w1, h2 + ball.radius, w1, h3 - ball.radius);
             drawLine(w2, h2 + ball.radius, w2, h3 - ball.radius);
             //next animation (make text appear)
+            $('.date').show('slow');
+            $('.date').hide('slow');
             $('.clock').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
             $('.techtrix-text').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
             $('.small-text').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
-               
+            // setInterval('showClock','1000');
         }
     }
 
