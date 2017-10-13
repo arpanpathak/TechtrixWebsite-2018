@@ -145,6 +145,7 @@ function animateT() {
             $('.techtrix-text').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
             $('.small-text').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
             // setInterval('showClock','1000');
+           
         }
     }
 
