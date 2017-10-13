@@ -1,29 +1,28 @@
 body,html{
 	margin: 0 0;
 	background: #1C2833;
-
+	overflow-x: hidden;
 }
 *:hover{
 	outline: none;
 }
 .container{
-	display: grid;
+	
 	text-align: center;
-	grid-template-columns: 1fr;
-	grid-gap: 5px;
+	
 	margin: 0 auto;
 }
 .clock{
 	display: inline-block;
 	visibility: hidden;
-	width: auto;
+	
 	position: absolute;
-	 bottom: 3%;
+	 bottom: 1px;
 	 left: 50%;
-	 transform: translate(-50%, 0%);
+	 transform: translate(-22%, 0%);
 	 zoom: 0.9;
-	    -moz-transform: scale(0.9)
-	   
+	 -moz-transform: scale(0.9) translate(-30%, 0%);
+	 
 }
 #logoAnime{
 	display: inline-block;
@@ -32,8 +31,9 @@ body,html{
 	 top: 50%;
 	 left: 50%;
 	 transform: translate(-30%, -70%);
+	 -moz-transform: translate(-30%, -70%) scale(0.8);
 	 zoom: 0.9;
-	    -moz-transform: scale(0.9)
+	 
 }
 .techtrix-text{  
 	visibility: hidden;
@@ -45,6 +45,7 @@ body,html{
 	left: 50%;
 	text-align: center;
 	transform: translateX(-65%);
+	-moz-transform: transform: translateX(-65%);
 }
 .no{
 	font-family: arial;
@@ -71,6 +72,6 @@ body,html{
 {
 	.clock{
 		zoom: 0.5;
-		   -moz-transform: scale(0.5)
+		-moz-transform: scale(0.5)
 	}
 }
