@@ -22,6 +22,9 @@ body,html{
 	
 	margin: 0 auto;
 }
+#commingsoon{
+	font-family: latina; font-size: 30px; position: fixed; bottom: 0; left: 0; color:#fff; display: none;
+}
 .clock{
 	display: inline-block;
 	visibility: hidden;
@@ -106,6 +109,7 @@ body,html{
 .logo-container{
 	position: relative;
 }
+
 @font-face {
     font-family: latina;
     src: url(neo_latina.ttf);
@@ -114,6 +118,7 @@ body,html{
 @media (max-width: 1200px)
 {
 	.clock{
+		
 		zoom: 0.3;
 		-moz-transform: scale(0.3);
 	}
@@ -137,6 +142,7 @@ body,html{
 	/*.clock{
 		visibility: hidden;
 	}*/
+
 	.logo-container{
 		transform: translateX(-30%);
 		-moz-transform: translateX(-30%);
@@ -144,6 +150,11 @@ body,html{
 		position: relative;
 		margin: 0 auto;
 		text-align: center;
+	}
+	#commingsoon{
+		position: fixed;
+		top: 0;
+		left: 0;
 	}
 	
 }
