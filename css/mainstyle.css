@@ -63,6 +63,7 @@ body,html{
   100%{ transform: translateY();
 	 -moz-transform: translateY(); } 
 } 
+
 #logoAnime{
 	display: inline-block;
 	
@@ -71,10 +72,16 @@ body,html{
 	 left: 50%;
 	 transform: translateX(-30%);
 	 -moz-transform: translateX(-33%) scale(0.8);
-	 animation: toTop 10s linear;
+	 animation: toTop 3s linear;
 	 zoom: 0.9;
 	 
 }
+#canvas:hover{
+	transition: 2s linear;
+	transform: rotateZ(360deg);
+	-moz-transform: rotateZ(360deg);
+}
+
 .techtrix-text{  
 	visibility: hidden;
 	text-shadow: 1px 1px 1px lightgray;
