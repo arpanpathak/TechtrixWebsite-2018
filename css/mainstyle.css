@@ -144,9 +144,9 @@ body,html{
 	}*/
 
 	.logo-container{
-		transform: translateX(-30%);
-		-moz-transform: translateX(-30%);
-		transform: scale(0.5);
+		transform: translateX(-300px);
+		-moz-transform: translateX(-300px);
+		transform: scale(0.7);
 		position: relative;
 		margin: 0 auto;
 		text-align: center;
