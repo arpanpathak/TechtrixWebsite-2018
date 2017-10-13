@@ -51,6 +51,15 @@ body,html{
 	-moz-transform: scale(0.9) translate(-50%, 0%);
 	 
 }
+@keyframes toTop{
+  0%{ transform: translate(10px,10px);
+	 -moz-transform: translate(10px,10px;) }
+  
+  10%{ transform: translate(10px,10px);
+	 -moz-transform: translate(10px,10px;) }
+  100%{ transform: translateY();
+	 -moz-transform: translateY(); } 
+} 
 #logoAnime{
 	display: inline-block;
 	
@@ -59,6 +68,7 @@ body,html{
 	 left: 50%;
 	 transform: translate(-30%, -70%);
 	 -moz-transform: translate(-30%, -70%) scale(0.8);
+	 animation: toTop 10s linear;
 	 zoom: 0.9;
 	 
 }
