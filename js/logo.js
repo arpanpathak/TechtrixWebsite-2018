@@ -140,6 +140,7 @@ function animateT() {
             //next animation (make text appear)
             $('.date').show('slow');
             $('.date').hide('slow');
+            $('#commingsoon').fadeIn('slow');
             $('.clock').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
             $('.techtrix-text').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
             $('.small-text').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
