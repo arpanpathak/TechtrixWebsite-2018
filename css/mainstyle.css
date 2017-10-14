@@ -203,6 +203,9 @@ body,html{
 	.techtrix-text{
 		font-size: 80px;
 	}
+	@-moz-document url-prefix() {
+	    .techtrix-text {font-size: 70px;}
+	}
 	.small-text{
 		transform: translateX(10%);
 		-moz-transform: translateX(10%);
