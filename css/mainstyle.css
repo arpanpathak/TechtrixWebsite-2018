@@ -197,8 +197,8 @@ body,html{
 {
 
 	.rising{
-		transform: translateX(-10%);
-		-moz-transform: translateX(-10%);
+		/*transform: translateX(-2%);
+		-moz-transform: translateX(-2%);*/
 	}
 	.techtrix-text{
 		font-size: 80px;
@@ -210,7 +210,9 @@ body,html{
 	/*.clock{
 		visibility: hidden;
 	}*/
-
+	#logoAnime{
+		transform: translateX(-38%);
+	}
 	.logo-container{
 		transform: translateX(-300px);
 		-moz-transform: translateX(-300px);

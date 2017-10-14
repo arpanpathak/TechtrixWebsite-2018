@@ -144,6 +144,9 @@ function animateT() {
             $('.clock').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
             $('.techtrix-text').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
             $('.small-text').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 7000);
+            
+
+            $('.rising').css({"text-shadow": "-2px -1px 2px purple,2px -2px 2px blue,2px -10px 20px white,0 -2px 6px red,2px -2px 10px white, 5px -10px 15px lightyellow,8px -20px 20px yellow,12px -30px 25px orange,5px -60px 40px orange,15px -34px 30px darkorange,0px -36px 35px red,40px -40px 50px red,-20px -60px 40px red,20px -80px 40px red,40px -80px 40px red,20px -120px 60px red,20px -150px 80px black,50px -160px 80px black,100px -200px 100px black,120px -150px 100px black,100px -100px 100px black,120px -220px 100px black,200px -300px 150px black;"}).animate({"text-shadow": "none"}, 3000);
             // setInterval('showClock','1000');
            
         }
