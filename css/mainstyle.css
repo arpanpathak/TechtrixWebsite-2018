@@ -96,6 +96,8 @@ body,html{
 	animation-duration: 3s;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function:linear;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
 	
 }
 .date{
