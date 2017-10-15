@@ -134,11 +134,13 @@ body,html{
 #logoAnime{
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: calc(50vh - 164px);
 	position: relative;
 	height: 328px;
 	width: 328px;
 	
 }
+
 #canvas:hover{
 	transition: 2s linear;
 	transform: rotateZ(360deg);

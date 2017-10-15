@@ -1,6 +1,8 @@
 var animationComplete = false;
 function animationCalled() {
-	// $('#logoAnime').animate({top:'25%'},2000)
+	$('#logoAnime').animate({
+		'margin-top':'0px'
+	},2000)
 	animationComplete = true;
 }
 // function showClock(){
