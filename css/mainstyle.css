@@ -191,6 +191,7 @@ body,html{
 		
 		zoom: 0.3;
 		-moz-transform: scale(0.3);
+		transform: scale(0.3)
 	}
 
 }
