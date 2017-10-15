@@ -156,6 +156,7 @@ body,html{
 	font-size: 111px;
 	animation: typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
+    z-index: 10;
 }
 .no{
 	font-family: arial;
