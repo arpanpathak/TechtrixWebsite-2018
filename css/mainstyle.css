@@ -16,11 +16,15 @@ body,html{
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+#particles-js{
+	height: 100vh;
+}
 .container{
-	
-	text-align: center;
-	
-	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
 }
 #commingsoon{
 	font-family: latina; font-size: 30px; position: fixed; bottom: 0; left: 0; color:#fff; display: none;
@@ -96,6 +100,8 @@ body,html{
 	animation-duration: 3s;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function:linear;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
 	
 }
 .date{
@@ -117,58 +123,52 @@ body,html{
 }
 @keyframes toTop{
   0%{ top: 50%; transform: translate(10px,10px);
-	 -moz-transform: translate(10px,10px;)  }
+	 -moz-transform: translate(10px,10px);  }
   
   10%{ transform: translate(10px,10px);
-	 -moz-transform: translate(10px,10px;) }
+	 -moz-transform: translate(10px,10px) }
   100%{ transform: translateY();
 	 -moz-transform: translateY(); } 
 } 
 
 #logoAnime{
-	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: calc(50vh - 164px);
+	position: relative;
+	height: 328px;
+	width: 328px;
 	
-	position: absolute;
-	 top: 0%;
-	 left: 50%;
-	 transform: translateX(-30%);
-	 -moz-transform: translateX(-33%) scale(0.8);
-	 animation: toTop 3s linear;
-	 zoom: 0.9;
-	 
 }
+
 #canvas:hover{
 	transition: 2s linear;
 	transform: rotateZ(360deg);
 	-moz-transform: rotateZ(360deg);
 }
-
+.rising{
+	text-align: center;
+	
+}
 .techtrix-text{  
 	visibility: hidden;
 	text-shadow: 1px 1px 1px lightgray;
-	position: absolute;
 	color: #fff;
 	font-size: 111px;
-	bottom: 10%;
-	left: 50%;
-	text-align: center;
-	transform: translateX(-65%);
-	-moz-transform: transform: translateX(-65%);
 	animation: typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 .no{
 	font-family: arial;
 }
+
 .small-text{
-	position: absolute;
 	margin-top: -10px;
 	visibility: hidden;
 	font-family: arial;
 	color: #fff;
 	font-family: latina;
 	font-size: 20px;
-	transform: translateX(18px);
 }
 .highlight{
 	background: #fff;
@@ -189,45 +189,43 @@ body,html{
 		
 		zoom: 0.3;
 		-moz-transform: scale(0.3);
+		transform: scale(0.3)
 	}
 
 }
 
 @media (max-width: 700px)
 {
-
-	.rising{
-		/*transform: translateX(-2%);
-		-moz-transform: translateX(-2%);*/
+	#logoAnime{
+		-webkit-transform:scale(0.6);
+		-moz-transform: scale(0.6);
+		transform: scale(0.6);
 	}
+	
 	.techtrix-text{
 		font-size: 80px;
 	}
 	@-moz-document url-prefix() {
 	    .techtrix-text {font-size: 70px;}
 	}
-	.small-text{
-		transform: translateX(10%);
-		-moz-transform: translateX(10%);
-	}
-	/*.clock{
+	
+	.clock{
 		visibility: hidden;
-	}*/
-	#logoAnime{
-		transform: translateX(-38%);
 	}
-	.logo-container{
-		transform: translateX(-300px);
-		-moz-transform: translateX(-300px);
-		transform: scale(0.7);
-		position: relative;
-		margin: 0 auto;
-		text-align: center;
-	}
+
 	#commingsoon{
 		position: fixed;
 		top: 0;
 		left: 0;
 	}
 	
+}
+
+@media(max-width: 400px){
+	.techtrix-text{
+		font-size: 50px;
+	}
+	@-moz-document url-prefix() {
+	    .techtrix-text {font-size: 30px;}
+	}
 }
