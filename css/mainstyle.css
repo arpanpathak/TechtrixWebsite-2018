@@ -155,7 +155,8 @@ body,html{
 	left: 50%;
 	text-align: center;
 	transform: translateX(-65%);
-	-moz-transform: transform: translateX(-65%);
+	-moz-transform: translateX(-65%);
+	transform: translateX(-65%);
 	animation: typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
