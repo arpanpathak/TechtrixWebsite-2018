@@ -137,7 +137,7 @@ body,html{
 	position: relative;
 	height: 328px;
 	width: 328px;
-	transform: scale(0.6)
+	
 }
 #canvas:hover{
 	transition: 2s linear;
@@ -194,7 +194,11 @@ body,html{
 
 @media (max-width: 700px)
 {
-
+	#logoAnime{
+		-webkit-transform:scale(0.6);
+		-moz-transform: scale(0.6);
+		transform: scale(0.6);
+	}
 	
 	.techtrix-text{
 		font-size: 80px;
