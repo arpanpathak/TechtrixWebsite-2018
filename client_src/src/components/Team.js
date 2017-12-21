@@ -32,6 +32,7 @@ class Team extends React.Component
 	  });
 	}
 	render(){
+		const colors=["#0F3438","#13273A","#07121D","#051905","#290F38","#0F3438"]
 		return (
 			<div className='Team'>
 		  	<div className='contentWrap'>
@@ -47,8 +48,8 @@ class Team extends React.Component
 		    	          <span id='nextSlide' className='waves-effect waves-light content-indicator' ><i className='medium material-icons middle-indicator-text'>chevron_right</i></span>
 		    	        </div>
 		    	      </div>
-		    	      {teams.map((_t) =>
-		    	        <div key={_t} className='slide white-text'>
+		    	      {teams.map((_t,j) =>
+		    	        <div key={_t} className='slide white-text' style={{background: colors[j]}}>
 		    	          <div className='slide-content overflow' >
 		    	            
 		    	            <div>
