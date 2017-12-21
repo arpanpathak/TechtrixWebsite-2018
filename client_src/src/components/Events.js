@@ -3,7 +3,7 @@ import $ from 'jquery';
 import EventList from './EventList';
 import EventIcon from './EventIcon';
 import '../assets/css/Events.css';
-import {SectionsContainer, Section} from 'react-fullpage';
+import {SectionsContainer, Section,Header} from 'react-fullpage';
 
 const coding = [
   {id: 1, name: 'Logia', icon: 'code'},
@@ -65,6 +65,7 @@ class Events extends Component {
     let options = {
           sectionClassName:     'section-fullpage',
           anchors:              ['coding', 'robotics', 'gaming','creative','fun','geek'],
+          scrollBar:            false,
           navigation:           true,
           verticalAlign:        false,
           sectionPaddingTop:    '0',
