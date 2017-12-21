@@ -1,0 +1,22 @@
+.fade-enter {
+  /*transform: translateX(100%);*/
+  opacity: 0;
+  background: transparent;
+}
+.fade-enter.fade-enter-active {
+  /*transform: translateX(0%);*/
+  opacity: 1;
+  background: #000205;
+  transition: background 0.4s ease-in, opacity 0.6s ease-in 0.4s;
+}
+.fade-exit {
+  /*transform: translateX(0%);*/
+  opacity: 1;
+  background: transparent;
+}
+.fade-exit.fade-exit-active {
+  /*transform: translateX(-100%);*/
+  opacity: 0;
+  background: #000205;
+  transition: opacity 0.6s ease-out, background 0.4s ease-out 0.6s;
+}

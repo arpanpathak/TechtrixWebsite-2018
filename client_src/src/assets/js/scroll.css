@@ -1,0 +1,12 @@
+.fullpage
+{
+	height: 100vh;
+	overflow:hidden;
+}
+.fullpage .page
+{
+	
+	overflow:hidden;
+	height: 100vh;
+}
+
