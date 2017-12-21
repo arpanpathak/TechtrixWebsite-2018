@@ -12,7 +12,7 @@
 nav {
   background-color: transparent;
   text-align: center;
-  box-shadow: 1px 1px 1px darkgray;
+  box-shadow: 1px 6px 10px rgba(0,0,0,.4);
 }
 nav .nav-wrapper {
   display: inline-block;
