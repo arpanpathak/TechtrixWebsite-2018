@@ -3,13 +3,15 @@ import Slider from './Slider';
 import $ from 'jquery';
 import '../assets/css/Team.css';
 import '../assets/css/Slider.css';
-const teams=["ROBOTICS","WEB DEVELOPMENT","GAMING","CREATIVE","FUN"];
+const teams=["ROBOTICS","WEB DEVELOPMENT AND CODING","GAMING","CREATIVE","FUN"];
 var people={
 	"ROBOTICS": [
-		{name: "abc"},{name: "abc1"},{name: "abc2"}
+		{name: "PRASHANT UPADHYAY",contact: "9051739884",email: "prashantuy36@gmail.com"},
+		{name: "SAURABH BAGLA",contact: "7278103385",email: "baglasaurabh6@gmail.com"},
 	],
-	"WEB DEVELOPMENT": [
-		{name: "Pranit Bose"},{name: "Arpan Pathak",img: "https://www.limestone.edu/sites/default/files/user.png"},{name: "abc2"}
+	"WEB DEVELOPMENT AND CODING": [
+		{name: "Pranit Bose"},
+		{name: "Arpan Pathak",email: "arpan.pathak47@gmail.com",contact: "7686009276",img: "https://www.limestone.edu/sites/default/files/user.png"}
 	],
 	"GAMING": [
 		{name: "Kaustav Biswas",contact: "9477305001",email:"kbdudola@gmail.com"},
@@ -32,7 +34,7 @@ class Team extends React.Component
 	  });
 	}
 	render(){
-		const colors=["#0F3438","#13273A","#07121D","#051905","#290F38","#0F3438"]
+		const colors=["#0F3438","#13273A","#07121D","#051905","#290F38","#0F3438"];
 		return (
 			<div className='Team'>
 		  	<div className='contentWrap'>

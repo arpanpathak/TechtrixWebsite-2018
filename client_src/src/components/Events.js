@@ -3,7 +3,7 @@ import $ from 'jquery';
 import EventList from './EventList';
 import EventIcon from './EventIcon';
 import '../assets/css/Events.css';
-import {SectionsContainer, Section,Header} from 'react-fullpage';
+import {SectionsContainer, Section,Header,ScrollToTopOnMount} from 'react-fullpage';
 
 const coding = [
   {id: 1, name: 'Logia', icon: 'code'},
@@ -70,19 +70,20 @@ class Events extends Component {
           verticalAlign:        false,
           sectionPaddingTop:    '0',
           sectionPaddingBottom: '50px',
-          arrowNavigation:      true
+          // arrowNavigation:      true
     };
     return(
       <div className='Events'>
         <div className='contentWrap fullpage'>
           <EventIcon />
+          <ScrollToTopOnMount />
           <SectionsContainer {...options}>
-          <Section color="#13273A" className="section-fullpage"><EventList id="1" eventCategory={coding} categoryName='CODING' pageno="0" /></Section>
-          <Section color="#07121D"><EventList id="2" eventCategory={robotics} categoryName='ROBOTICS' pageno="1" /></Section>
-          <Section color="#051905"><EventList id="3" eventCategory={gaming} categoryName='GAMING' pageno="2" /></Section>
-          <Section color="#290F38"><EventList id="4" eventCategory={creative} categoryName='CREATIVE' pageno="3"/></Section>
-          <Section color="#0F3438"><EventList id="5" eventCategory={geek} categoryName='GEEK' pageno="4"/></Section>
-          <Section color="#273746"><EventList id="6" eventCategory={fun} categoryName='FUN' pageno="5" /></Section>
+            <Section color="#13273A" className="section-fullpage"><EventList id="1" eventCategory={coding} categoryName='CODING' pageno="0" /></Section>
+            <Section color="#07121D"><EventList id="2" eventCategory={robotics} categoryName='ROBOTICS' pageno="1" /></Section>
+            <Section color="#051905"><EventList id="3" eventCategory={gaming} categoryName='GAMING' pageno="2" /></Section>
+            <Section color="#290F38"><EventList id="4" eventCategory={creative} categoryName='CREATIVE' pageno="3"/></Section>
+            <Section color="#0F3438"><EventList id="5" eventCategory={geek} categoryName='GEEK' pageno="4"/></Section>
+            <Section color="#273746"><EventList id="6" eventCategory={fun} categoryName='FUN' pageno="5" /></Section>
           </SectionsContainer>
         </div>
       </div>

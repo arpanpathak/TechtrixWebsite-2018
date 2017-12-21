@@ -1,7 +1,6 @@
 import React from 'react';
 import Slider from './Slider';
 import '../assets/css/EventList.css';
-
 const EventList = (props) => (
   <div className='section page' pageno={props.pageno}>
     <Slider id={props.id}>
@@ -23,6 +22,7 @@ const EventList = (props) => (
                 <div className='eventBtn'>
                   <a href="#" className='btn btn-large waves-effect amber black-text'>{_event.name}</a>
                 </div>
+                
               </div>
             </div>
           )}

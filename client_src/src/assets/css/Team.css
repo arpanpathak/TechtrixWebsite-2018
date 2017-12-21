@@ -11,7 +11,7 @@
 	overflow-x: hidden;
 }
 .card{
-	z-index: 3;
+	box-shadow: border-box;
 	min-height: 300px;
 	min-width: 300px;
 	margin: 5px 5px 5px 1px;
@@ -41,10 +41,14 @@
 	border: 2px solid orange;
 }
 .card:hover h6{
+	transition: 0.6s ease-in;
+	box-sizing: border-box;
 	transform: rotateZ(-15deg);
-	font-size: 20px;
+	color: #0F3438;
+	text-shadow: 0 0 1px rgba(0,0,0,1);
 }
 .card:hover{
+	z-index: 5;
 	box-shadow: 2px 5px 10px rgba(0,0,0,1);
 	transform: rotateZ(15deg);
 }
