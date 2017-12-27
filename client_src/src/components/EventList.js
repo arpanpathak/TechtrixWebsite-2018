@@ -1,6 +1,9 @@
 import React from 'react';
 import Slider from './Slider';
 import '../assets/css/EventList.css';
+import '../assets/css/EventDetails.css';
+import EventDetails from './EventDetails.js';
+
 const EventList = (props) => (
   <div className='section page' pageno={props.pageno}>
     <Slider id={props.id}>
@@ -17,12 +20,12 @@ const EventList = (props) => (
           {props.eventCategory.map((_event) =>
             <div key={_event.id} className='slide white-text'>
               <div className='slide-content'>
-                <h2 className='amber-text'>{props.categoryName}</h2>
+                <h2 className='amber-text' style={{fontFamily: "latina"}}>{props.categoryName}</h2>
                 <i className="material-icons">{_event.icon}</i>
                 <div className='eventBtn'>
-                  <a href="#" className='btn btn-large waves-effect amber black-text'>{_event.name}</a>
+                  <a  className='btn btn-large waves-effect amber black-text' id={ `show_${props.categoryName+_event.id}` }>{_event.name}</a>
                 </div>
-                
+                <EventDetails id={`event_${props.categoryName+_event.id}` } trigger={`#show_${props.categoryName+_event.id}` } eventName={_event.name} />
               </div>
             </div>
           )}

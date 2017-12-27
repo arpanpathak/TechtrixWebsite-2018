@@ -3,7 +3,8 @@ import $ from 'jquery';
 import EventList from './EventList';
 import EventIcon from './EventIcon';
 import '../assets/css/Events.css';
-import {SectionsContainer, Section,Header,ScrollToTopOnMount} from 'react-fullpage';
+import SectionsContainer from './SectionsContainer';
+import Section from './Section';
 
 const coding = [
   {id: 1, name: 'Logia', icon: 'code'},
@@ -55,35 +56,43 @@ const fun = [
 
 class Events extends Component {
   componentDidMount() {
+    // $('.Navigation-Anchor')[0].click( );
     $('.contentWrap').css('height', '100%').css('height', '-=64px');
     $(window).resize(() => {
       $('.contentWrap').css('height', '100%').css('height', '-=64px');
     });
+    $('.Navigation').css({top:'66px',left: '0',right: 'auto'});
+    $('.Navigation-Anchor').css({display: 'inline-block',background: 'transparent',
+                                transition: '0.6s ease-in'});
+    let events=['coding','robotics','gaming','creative','geek','fun'];
+    $('.Navigation-Anchor').each(function(i){ $(this).append(events[i]) });
   }
 
   render() {
     let options = {
-          sectionClassName:     'section-fullpage',
-          anchors:              ['coding', 'robotics', 'gaming','creative','fun','geek'],
+          
+          anchors:              ['coding', 'robotics', 'gaming','creative','geek','fun'],
           scrollBar:            false,
           navigation:           true,
           verticalAlign:        false,
           sectionPaddingTop:    '0',
           sectionPaddingBottom: '50px',
+          navigationTooltips: ['firstSlide', 'secondSlide'],
+          showActiveTooltip: false
           // arrowNavigation:      true
     };
     return(
       <div className='Events'>
-        <div className='contentWrap fullpage'>
+        <div className='contentWrap fullpage' style={{overflow: 'hidden'}}>
           <EventIcon />
-          <ScrollToTopOnMount />
+          
           <SectionsContainer {...options}>
-            <Section color="#13273A" className="section-fullpage"><EventList id="1" eventCategory={coding} categoryName='CODING' pageno="0" /></Section>
-            <Section color="#07121D"><EventList id="2" eventCategory={robotics} categoryName='ROBOTICS' pageno="1" /></Section>
-            <Section color="#051905"><EventList id="3" eventCategory={gaming} categoryName='GAMING' pageno="2" /></Section>
-            <Section color="#290F38"><EventList id="4" eventCategory={creative} categoryName='CREATIVE' pageno="3"/></Section>
-            <Section color="#0F3438"><EventList id="5" eventCategory={geek} categoryName='GEEK' pageno="4"/></Section>
-            <Section color="#273746"><EventList id="6" eventCategory={fun} categoryName='FUN' pageno="5" /></Section>
+            <Section color="#13273A"><EventList id="1" eventCategory={coding} categoryName='CODING' /></Section>
+            <Section color="#07121D"><EventList id="2" eventCategory={robotics} categoryName='ROBOTICS' /></Section>
+            <Section color="#13273A"><EventList id="3" eventCategory={gaming} categoryName='GAMING' /></Section>
+            <Section color="#290F38"><EventList id="4" eventCategory={creative} categoryName='CREATIVE' /></Section>
+            <Section color="#0F3438"><EventList id="5" eventCategory={geek} categoryName='GEEK' /></Section>
+            <Section color="#273746"><EventList id="6" eventCategory={fun} categoryName='FUN' /></Section>
           </SectionsContainer>
         </div>
       </div>

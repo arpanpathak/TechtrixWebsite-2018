@@ -4,14 +4,41 @@
   margin: 0 0 0 0;
   height: 100%;
   width: 100%;
-  background: rgba(138, 13, 39,1);
-  display: block;
-  padding: 10px 10px 10px 10px;
- 
+  position: absolute;
+  display: none;
+  background: #17202A;
+  padding: 10px 0 10px 0;
+  z-index: 100;
 }
 
 .eventDetails h1{
+  font-family: latina;
   text-align: center;
-  font-family: arial;
+  margin: 0;
   color: #fff;
+}
+.close-btn{
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  font-size: 35px;
+  height: 50px;
+  width: 50px;
+  border-radius: 60px;
+  transition: all 1s ease;
+}
+.close-btn:hover{
+  text-shadow: 1px 1px 3px black;
+}
+.animation{
+   transform-origin: center center;
+   animation: move 3s infinite;
+}
+@keyframes move{
+  0%{ }
+  25%{ background: gray;}
+  50%{ background: transparent;}
+  100%{  }
 }

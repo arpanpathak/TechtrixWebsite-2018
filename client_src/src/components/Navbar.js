@@ -25,14 +25,14 @@ class Navbar extends Component {
           <div className='nav-wrapper'>
             <ul>
               <li className='popOut'><NavLink exact to="/" activeClassName="link-active">HOME</NavLink></li>
-              <li className='popOut'><NavLink exact to="/events" activeClassName="link-active">EVENTS</NavLink></li>
+              <li className='popOut'><NavLink exact to="/events#coding" activeClassName="link-active">EVENTS</NavLink></li>
               <li className='popOut'><NavLink exact to="/signup" activeClassName="link-active">SIGN UP</NavLink></li>
               <li className='popOut'><NavLink exact to="/gallery" activeClassName="link-active">GALLERY</NavLink></li>
               <li><Link to="/" className="brand-logo">Logo</Link></li>
               <li className='popOut'><NavLink exact to="/team" activeClassName="link-active">TEAM</NavLink></li>
               <li className='popOut'><NavLink exact to="/sponsors" activeClassName="link-active">SPONSORS</NavLink></li>
               <li className='popOut'><NavLink exact to="/about" activeClassName="link-active">ABOUT US</NavLink></li>
-              <li className='popOut'><NavLink exact to="/contact" activeClassName="link-active">CONTACT US</NavLink></li>
+              { /* <li className='popOut'><NavLink exact to="/contact" activeClassName="link-active">CONTACT US</NavLink></li> */ }
             </ul>
           </div>
           <div className="hamburger fold" id="hamburger-10"> 
@@ -49,7 +49,7 @@ class Navbar extends Component {
           <NavLink exact to="/team" activeClassName="link-active">TEAM</NavLink>
           <NavLink exact to="/sponsors" activeClassName="link-active">SPONSORS</NavLink>
           <NavLink exact to="/about" activeClassName="link-active">ABOUT US</NavLink>
-          <NavLink exact to="/contact" activeClassName="link-active">CONTACT US</NavLink>
+          { /*<NavLink exact to="/contact" activeClassName="link-active">CONTACT US</NavLink> */}
         </div>
         
       </div>

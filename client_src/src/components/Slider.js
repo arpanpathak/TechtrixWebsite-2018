@@ -23,9 +23,14 @@ class Slider extends Component {
     this.animationSpeed = 1000;
     this.sliderContainer.css('width', (this.numOfSlides*100)+'%');
     this.prevBtn.hide();
+    this.appear();
   }
-
+  appear(){
+    $('.card').css('animation','hang 3s infinite');
+    setTimeout(()=>{  $('.card').css('animation','none'); }, 3000 );
+  }
   prev = (e) => {
+    this.appear();
     $(this).off(e);
     if (this.slideIndex > 1) {
       let slideWidth = this.slides[0].clientWidth;
@@ -43,6 +48,7 @@ class Slider extends Component {
   }
 
   next = (e) => {
+    this.appear();
     $(this).off(e);
     if (this.slideIndex < this.numOfSlides) {
       let slideWidth = this.slides[0].clientWidth;

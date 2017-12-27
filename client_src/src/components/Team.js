@@ -3,28 +3,38 @@ import Slider from './Slider';
 import $ from 'jquery';
 import '../assets/css/Team.css';
 import '../assets/css/Slider.css';
-const teams=["ROBOTICS","WEB DEVELOPMENT AND CODING","GAMING","CREATIVE","FUN"];
+import '../assets/data/team.js';
+
+const teams=["Executive Heads","TECHNICAL HEADS","ROBOTICS EVENT HEADS","WEB DEVELOPMENT AND DESIGN","GAMING EVENT HEADS","CODING EVENT HEADS"];
 var people={
-	"ROBOTICS": [
-		{name: "PRASHANT UPADHYAY",contact: "9051739884",email: "prashantuy36@gmail.com"},
-		{name: "SAURABH BAGLA",contact: "7278103385",email: "baglasaurabh6@gmail.com"},
+	"Executive Heads":[
+		{name: "ROHIT KUNDU",contact:"+91 9674672334",email:"dummy",desg:"GENERAL SECRETARY",fb: "https://www.facebook.com/rohit.kundu.148"},
+		{name: "BARUN KUMAR SINGH",contact:"+91 8348591468",email:"dummy",desg:"ASST. GENERAL SECRETARY",img: require('../assets/images/team/barun.jpg'), fb: "https://www.facebook.com/BSP2596"},
+			
 	],
-	"WEB DEVELOPMENT AND CODING": [
-		{name: "Pranit Bose"},
-		{name: "Arpan Pathak",email: "arpan.pathak47@gmail.com",contact: "7686009276",img: "https://www.limestone.edu/sites/default/files/user.png"}
+	"ROBOTICS EVENT HEADS": [
+		{name: "PRASHANT UPADHYAY",contact: "9051739884",email: "prashantuy36@gmail.com",desg:"TECHNICAL SECRETARY",img: require('../assets/images/team/prashant.jpg'), fb: "https://www.facebook.com/prashant.upadhyay.5220"},
+		{name: "SAURABH BAGLA",contact: "7278103385",email: "baglasaurabh6@gmail.com",desg:"TECHNICAL SECRETARY"},
 	],
-	"GAMING": [
+	"TECHNICAL HEADS": [
+		{name: "HIMADRI BISWAS",contact: "+91 8296009994",email: "dummy",fb: "https://www.facebook.com/himadribiswas95",img: require('../assets/images/team/himadri.jpg')},
+		{name: "PRASHANT UPADHYAY",contact: "+91 9051739884",email: "dummy",fb: "https://www.facebook.com/prashant.upadhyay.5220",img: require('../assets/images/team/prashant.jpg')}
+	],
+	"WEB DEVELOPMENT AND DESIGN": [
+		{name: "Pranit Bose",email: "pranitbose12@gmail.com",contact: "8420103465", fb: "https://www.facebook.com/pranitbose17",img: require('../assets/images/team/pranit.jpg')},
+		{name: "Arpan Pathak",email: "arpan.pathak47@gmail.com",contact: "7686009276",img: require('../assets/images/team/arpan.jpg'),fb: "https://www.facebook.com/arpan.pathak.5"}
+	],
+	"CODING EVENT HEADS": [
+		{name: "Pranit Bose",email: "pranitbose12@gmail.com",contact: "8420103465",desg: "LOGIA AND WEB DESIGN",img: require('../assets/images/team/pranit.jpg'),fb: "https://www.facebook.com/pranitbose17"},
+		{name: "Arpan Pathak",email: "arpan.pathak47@gmail.com",contact: "7686009276",desg: "LOGIA AND BUGS FUNNY",img: require('../assets/images/team/arpan.jpg'),fb: "https://www.facebook.com/arpan.pathak.5"},
+		{name: "PRASHANT UPADHYAY",contact: "9051739884",email: "prashantuy36@gmail.com",desg:"BUGS FUNNY AND WEB DESIGN",img: require('../assets/images/team/prashant.jpg'),fb: "https://www.facebook.com/prashant.upadhyay.5220"},
+	],
+	"GAMING EVENT HEADS": [
 		{name: "Kaustav Biswas",contact: "9477305001",email:"kbdudola@gmail.com"},
 		{name: "ABHRAK CHATTERJEE",contact: "8585044444",email:"abhrakchatterjee@gmail.com"},
 	],
-	"CREATIVE": [
-		{name: "abc"},{name: "abc1"},{name: "abc2"}
-	],
-	"FUN": [
-		{name: "abc"},{name: "abc1"},{name: "abc2"}
-	]
 };
-var img="https://www.limestone.edu/sites/default/files/user.png";
+
 class Team extends React.Component
 {
 	componentDidMount() {
@@ -34,7 +44,7 @@ class Team extends React.Component
 	  });
 	}
 	render(){
-		const colors=["#0F3438","#13273A","#07121D","#051905","#290F38","#0F3438"];
+		const colors=["#0F3438","#13273A","#07121D","rgba(138, 13, 39,1)","#290F38","#0F3438"];
 		return (
 			<div className='Team'>
 		  	<div className='contentWrap'>
@@ -55,19 +65,26 @@ class Team extends React.Component
 		    	          <div className='slide-content overflow' >
 		    	            
 		    	            <div>
-		    	            	<h2 className="amber-text">{_t}</h2>
+		    	            	<h2 className="amber-text" style={{fontFamily: 'latina'}}>{_t}</h2>
+		    	            	<div>
 		    	            	{people[_t].map((p,i)=>
-		    	            	
-		    	            		<a href="http://www.facebook.com" key={i}>
-		    	            		<div className='card'>
-		    	            			<img src='https://www.limestone.edu/sites/default/files/user.png' />
-		    	            			<h6> {p.name}</h6>
-		    	            			<h6> {p.contact} </h6>
-		    	            			<h6> {p.email} </h6>
+		    	           
+		    	          
+		    	            		<div className='card' key={i}>
+		    	            			<div class="pin"> <i className="material-icons" style={{fontSize: '30px'}}>attach_file</i></div>
+		    	            			<div className="image-container">
+		    	            				<a href={p.fb}><img src={ p.img } /></a>
+		    	            				<span className="fb">f</span>
+		    	            			</div>
+		    	            			<h6 className="name"> {p.name}</h6>
+		    	            			<h6 className="name">[ {p.desg} ]</h6>
+		    	            			<h6 className="info"> <i className="material-icons" style={{fontSize: '15px'}}>phone</i> {p.contact} </h6>
+		    	            			<h6 className="info"><i className="material-icons" style={{fontSize: '15px'}}>email</i> {p.email} </h6>
 		    	            		</div>
-		    	            		</a>
+		    	            		
 		    	            	
 		    	            	)}
+		    	            	</div>
 		    	            </div>
 		    	         
 		    	          </div>

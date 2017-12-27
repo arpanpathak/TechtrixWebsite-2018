@@ -11,6 +11,8 @@
 	overflow-x: hidden;
 }
 .card{
+	position: relative;
+	/*animation: hang 3s infinite;*/
 	box-shadow: border-box;
 	min-height: 300px;
 	min-width: 300px;
@@ -24,37 +26,59 @@
 	border: 0.04em solid gray;
 	box-shadow: 1px 2px 3px rgba(0,0,0,1);
 }
+.pin{
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
 .card:nth-child(odd){
 	
 }
 .card img{
+	cursor: pointer;
 	transition : all .6s ease-in;
 	border: 0;
 	margin: 0 auto;
 	display: block;
-	height: 120px;
-	width: 120px;
+	height: 200px;
+	width: 200px;
 	border-radius: 120px;
 }
 .card:hover img{
-	transform: rotateZ(-15deg);
-	border: 2px solid orange;
+	box-shadow: 0 0 8px black;
 }
 .card:hover h6{
 	transition: 0.6s ease-in;
 	box-sizing: border-box;
-	transform: rotateZ(-15deg);
 	color: #0F3438;
-	text-shadow: 0 0 1px rgba(0,0,0,1);
+	font-weight: bold;
+}
+.name{
+	font-weight: bold;
+	color: #0F3438;
+}
+.card:hover .name{
+	color: #D5073A;
 }
 .card:hover{
 	z-index: 5;
-	box-shadow: 2px 5px 10px rgba(0,0,0,1);
-	transform: rotateZ(15deg);
+	box-shadow: 6px 6px 30px rgba(0,0,0,1);
+
 }
 .container{
 	display: block;
 	margin-top: 30px;
+}
+.card h6{
+	padding: 5px 5px 5px 5px;
+	margin: 3px 30px 3px 30px;
+	box-shadow: 0px 30px 40px rgba(0,0,0,.1) inset;
+}
+.info{
+	padding: 0 0 0 0;
+	text-align: left;
+	margin: 3px 30px 3px 30px;
+	box-shadow: 0px 30px 40px rgba(0,0,0,.1) inset;
 }
 .section {
   height: 100%;
@@ -114,13 +138,28 @@ i.middle-indicator-text {
 .slide-content a {
   font-size: 1.5rem;
 }
+.image-container
+{  
+	position: relative;
+}
 
+.fb { 
+	padding-left: 3px;
+	border-radius: 35px;
+	height: 35px; width: 35px;
+	border: 1px solid #4267b2;
+	position: absolute; 
+	bottom: 10px;
+	color: #4267b2;
+	background: #fff; 
+	font-size: 30px;
+	right:  50px;
+}
 @media only screen and (min-width: 320px) and (max-width: 510px) and (orientation: portrait) {
   .slide-content i {
     font-size: 4rem;
   }
-  /*.card { width: 100px; height: 100px;}
-  .card img{width: 100%; border-radius: 0; }*/
+  
 }
 @media only screen and (min-height: 270px) and (max-height: 480px) and (orientation: landscape) {
   .slide-content h2 {
@@ -139,4 +178,16 @@ i.middle-indicator-text {
     line-height: 27px;
   }
   
+}
+@media only screen and (max-width: 700px) {
+	.card { width: 100px; min-height: 150px; }
+
+}
+@keyframes hang{
+	0% { opacity: 0; }
+	40%{ opacity: 0.2; transform: rotateZ(-25deg); }
+	
+	0%{  opacity: 1; }
+	90% {  transition: rotateZ(10deg); }
+	95% {  transition: rotateZ(10deg); }
 }

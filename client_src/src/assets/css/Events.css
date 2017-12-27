@@ -1,2 +1,18 @@
 .Events {
+	
+}
+.active {
+	box-shadow: 0 0 3px black;
+	background: red;
+
+}
+.animation {
+	animation: loop 3s infinite;
+}
+@keyframes loop{
+	0% { fill: #F32B0C; }
+	20% { fill: #0CF316; }
+	40% { fill: yellow; }
+	80% { fill: #F7C943; }
+	100% { fill: #F30C4B; }
 }

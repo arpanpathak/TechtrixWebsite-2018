@@ -1,3 +1,26 @@
 .Sponsors {
-  
+  align-items: center;
+
+}
+.sponsor {
+  	text-align: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+.sponsor img{
+	margin: 15px 15px 15px 15px;
+	align-content: center;
+	max-height: 200px;
+	max-width: 300px;
+
+}
+.sponsor h1 {
+	font-family: 'latina';
+}
+
+@media only screen and ( max-width: 600px ){
+	.sponsor h1 {
+		display: none;
+	}
 }
